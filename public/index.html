@@ -8,6 +8,104 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <!--background video-->
+    <div class="absolute top-0 left-0 z-1 w-full">
+        <video src="videos/bg video.mp4" class="hidden md:block w-full h-full" muted loop autoplay></video>
+        <img src="images/coffee cup-1.jpg" alt="bg-image" class="md:hidden w-full h-screen">
+    </div>
+    <!--nav bar-->
+    <nav class="sticky top-0 left-0 flex justify-between z-50 w-full items-center md:px-12" style="background: rgb(0, 0, 0, 0.5);">
+        <div class="p-4">
+            <a href="#"><img src="images/assets/logo.png" class="w-24" alt="logo"></a>
+        </div>
+        <!--nav links-->
+        <div class="hidden md:flex md:gap-12 list-none p-4">
+            <a href="#">
+                <li class="text-2xl text-white hover:text-reddish ">Home</li>
+            </a>
+            <a href="#">
+                <li class="text-2xl text-white hover:text-reddish">Services</li>
+            </a>
+            <a href="#">
+                <li class="text-2xl text-white hover:text-reddish">Contact</li>
+            </a>
+            <a href="#">
+                <li class="text-2xl text-white hover:text-reddish">About</li>
+            </a>
+        </div>
+        <!--open and close icons, plus order button-->
+        <div class="p-4">
+            <img src="images/assets/menu icon.png" class="w-12 md:hidden" alt="close">
+            <img src="images/assets/close button.png" class="w-12 hidden" alt="close">
+            <!--button-->
+            <a href="#"><button class="hidden px-8 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
+        </div>
+    </nav>
+    <div class="flex relative z-10 w-full py-16 px-6 md:h-screen" style="background: rgb(0, 0, 0, 0.5);">
+        <!--hero text-->
+        <div class="flex flex-col items-center md:items-start md:py-24 md:w-1/2">
+            <div class="flex flex-col">
+                <h1 class="text-white text-4xl md:text-7xl font-bold">Wake up and smell the <span class="text-reddish"> coffee!</span></h1>
+                <h1 class="text-white text-4xl md:text-7xl font-bold">Your daily dose of <span class="text-reddish"> caffeine</span></h1>
+            </div>
+           <p class="text-white text-2xl py-4 md:text-xl md:py-16">
+            Life without coffee is a scary place. That’s why we’ve been proudly serving up fresh coffee to the San Francisco area since 2000. Globally sourced with the most delicious blends from around the world directly to your hand, our coffee makes even the most difficult days just a tad easier to get through.
+           </p>
+           <a href="#"><button class="px-12 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
+        </div>
+    </div>
+   <!--services-->
+    <div class="relative flex flex-col p-6 w-full bg-white">
+    <!--our services heading-->
+        <div class="flex flex-col items-center w-full">
+            <h1 class="text-4xl font-extrabold self-center md:text-6xl">Our Services</h1>
+        </div>
+        <!--our services content container-->
+        <div class="flex flex-col justify-between py-12 gap-8 md:flex-row">
+            <!--coffee delivery-->
+            <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish ">
+                <img src="images/delivery.png" class="border-4 rounded-3xl border-grayish" alt="coffee delivery">
+                <div class="flex flex-col items-center gap-8 p-4">
+                    <h1 class="text-4xl font-bold">Coffee Delivery</h1>
+                    <div class="w-full">
+                        <p class="text-2xl">Enjoy your favorite coffee from the comfort of your home.</p>
+                    </div>
+                    <div class="w-full">
+                        <a href="#"><button class="px-12 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
+                    </div>
+                </div>
+            </div>
+
+             <!--coffee delivery-->
+             <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish ">
+                <img src="images/delivery.png" class="border-4 rounded-3xl border-grayish" alt="coffee delivery">
+                <div class="flex flex-col items-center gap-8 p-4">
+                    <h1 class="text-4xl font-bold">Coffee Delivery</h1>
+                    <div class="w-full">
+                        <p class="text-2xl">Enjoy your favorite coffee from the comfort of your home.</p>
+                    </div>
+                    <div class="w-full">
+                        <a href="#"><button class="px-12 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
+                    </div>
+                </div>
+            </div>
+
+             <!--coffee delivery-->
+             <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish ">
+                <img src="images/delivery.png" class="border-4 rounded-3xl border-grayish" alt="coffee delivery">
+                <div class="flex flex-col items-center gap-8 p-4">
+                    <h1 class="text-4xl font-bold">Coffee Delivery</h1>
+                    <div class="w-full">
+                        <p class="text-2xl">Enjoy your favorite coffee from the comfort of your home.</p>
+                    </div>
+                    <div class="w-full">
+                        <a href="#"><button class="px-12 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="h-96 w-full" style="background-image: url(images/SVG/wave.svg); background-repeat: no-repeat; background-size: cover;"></div>
 </body>
 </html>
