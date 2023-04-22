@@ -24,6 +24,7 @@ module.exports = {
       "coffee": "#6F4E37",
       "reddish": "#ff4000",
       "grayish" : "#e6e6e6",
+      "cream" : "#FEFBEA",
     },
     extend: {
       backgroundImage : {
