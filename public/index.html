@@ -15,7 +15,7 @@
     <!--background video-->
     <div class="absolute top-0 left-0 z-1 w-full">
         <video src="videos/bg video.mp4" class="hidden md:block w-full h-full" muted loop autoplay></video>
-        <img src="images/coffee cup-1.jpg" alt="bg-image" class="md:hidden w-full h-screen">
+        <video src="videos/cccbb.mp4" class="md:hidden w-full h-screen" muted loop autoplay></video>
     </div>
     <!--nav bar-->
     <nav class="sticky top-0 left-0 flex justify-between z-50 w-full items-center md:px-12" style="background: rgb(0, 0, 0, 0.5);">
@@ -67,7 +67,7 @@
         <!--our services content container-->
         <div class="flex flex-col justify-between py-12 gap-8 md:flex-row">
             <!--coffee delivery-->
-            <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish ">
+            <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish "  data-aos="fade-up" data-aos-duration="2000">
                 <img src="images/delivery.png" class="border-4 rounded-3xl border-grayish h-96" alt="coffee delivery">
                 <div class="flex flex-col items-center gap-8 p-4">
                     <h1 class="text-4xl font-bold">Coffee Delivery</h1>
@@ -81,7 +81,7 @@
             </div>
 
              <!--coffee delivery-->
-             <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish ">
+             <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish " data-aos="flip-down" data-aos-duration="2000">
                 <img src="images/coffee testing.png" class="border-4 rounded-3xl border-grayish h-96" alt="coffee delivery">
                 <div class="flex flex-col items-center gap-8 p-4">
                     <h1 class="text-4xl font-bold">Coffee Testing</h1>
@@ -95,7 +95,7 @@
             </div>
 
              <!--coffee delivery-->
-             <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish ">
+             <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish " data-aos="fade-up" data-aos-duration="2000">
                 <img src="images/ice cream.png" class="border-4 rounded-3xl border-grayish h-96" alt="coffee delivery">
                 <div class="flex flex-col items-center gap-8 p-4">
                     <h1 class="text-4xl font-bold">Ice cream</h1>
@@ -130,7 +130,7 @@
             </div>
 
 
-            <div class="w-full md:2/5">
+            <div class="w-full md:2/5" data-aos="zoom-in-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 <img src="images/coffee cup.png" alt="coffee cup" class="h-96">
             </div>
             
@@ -149,15 +149,118 @@
     <!--menu and pricing-->
     <div class="flex flex-col items-center p-4 md:grid md:grid-cols-2  md:flex-row md:gap-4 bg-cream md:px-64">
         <div class="w-full md:px-64 text-center">
-            <h1>Hot coffee</h1>
-            <h1>Cold Coffee</h1>
+           <h1 class="text-xl font-bold">Coffee menu</h1>
+           <!--meal card -1 -->
+           <div class="flex w-full gap-4">
+                <div class="flex flex-col">
+                    <img src="images/colombian coffee.png" class="w-96" alt="colombian coffee">
+                    <h2 class="text-lg">Black coffee</h2>
+                </div>
+                 <!--price and description-->
+                <div class="flex flex-col">
+                    <p class="text-lg">Price: $100</p>
+                    <button class="bg-reddish px-8 py-2">Order now</button>
+                </div>
+           </div>
+
+           <!--meal card -2 -->
+           <div class="flex w-full gap-4">
+                <div class="flex flex-col">
+                    <img src="images/colombian coffee.png" alt="colombian coffee">
+                    <h2 class="text-lg">Black coffee</h2>
+                </div>
+                <!--price and description-->
+                <div class="flex flex-col">
+                    <p class="text-lg">Price: $100</p>
+                    <button class="bg-reddish px-8 py-2">Order now</button>
+                </div>
+            </div>
+
+            <!--meal card -3 -->
+            <div class="flex w-full gap-4">
+                <div class="flex flex-col">
+                    <img src="images/colombian coffee.png" alt="colombian coffee">
+                    <h2 class="text-lg">Black coffee</h2>
+                </div>
+                <!--price and description-->
+                <div class="flex flex-col">
+                    <p class="text-lg">Price: $100</p>
+                    <button class="bg-reddish px-8 py-2">Order now</button>
+                </div>
+            </div>
+            <!--meal card -4 -->
+            <div class="flex w-full gap-4">
+                <div class="flex flex-col">
+                    <img src="images/colombian coffee.png" alt="colombian coffee">
+                    <h2 class="text-lg">Black coffee</h2>
+                </div>
+                <!--price and description-->
+                <div class="flex flex-col">
+                    <p class="text-lg">Price: $100</p>
+                    <button class="bg-reddish px-8 py-2">Order now</button>
+                </div>
+            </div>
         </div>
+
+        <div class="w-full md:px-64 text-center">
+            <h1 class="text-xl font-bold">Coffee menu</h1>
+            <!--meal card -1 -->
+            <div class="flex w-full gap-4">
+                 <div class="flex flex-col">
+                     <img src="images/colombian coffee.png" alt="colombian coffee">
+                     <h2 class="text-lg">Black coffee</h2>
+                 </div>
+                  <!--price and description-->
+                 <div class="flex flex-col">
+                     <p class="text-lg">Price: $100</p>
+                     <button class="bg-reddish px-8 py-2">Order now</button>
+                 </div>
+            </div>
+ 
+            <!--meal card -2 -->
+            <div class="flex w-full gap-4">
+                 <div class="flex flex-col">
+                     <img src="images/colombian coffee.png" alt="colombian coffee">
+                     <h2 class="text-lg">Black coffee</h2>
+                 </div>
+                 <!--price and description-->
+                 <div class="flex flex-col">
+                     <p class="text-lg">Price: $100</p>
+                     <button class="bg-reddish px-8 py-2">Order now</button>
+                 </div>
+             </div>
+ 
+             <!--meal card -3 -->
+             <div class="flex w-full gap-4">
+                 <div class="flex flex-col">
+                     <img src="images/colombian coffee.png" alt="colombian coffee">
+                     <h2 class="text-lg">Black coffee</h2>
+                 </div>
+                 <!--price and description-->
+                 <div class="flex flex-col">
+                     <p class="text-lg">Price: $100</p>
+                     <button class="bg-reddish px-8 py-2">Order now</button>
+                 </div>
+             </div>
+             <!--meal card -4 -->
+             <div class="flex w-full gap-4">
+                 <div class="flex flex-col">
+                     <img src="images/colombian coffee.png" alt="colombian coffee">
+                     <h2 class="text-lg">Black coffee</h2>
+                 </div>
+                 <!--price and description-->
+                 <div class="flex flex-col">
+                     <p class="text-lg">Price: $100</p>
+                     <button class="bg-reddish px-8 py-2">Order now</button>
+                 </div>
+             </div>
+         </div>
     </div>
 </body>
 
 
 <!--footer sectrion-->
-<footer class="h-fit w-full" style="background-image: url(images/coffee\ bg.jpg); background-repeat: no-repeat; background-size: cover;" data-aos="fade-right"
+<footer class="h-fit w-full" style="background-image: url(images/coffee\ bg.jpg); background-repeat: no-repeat; background-size: cover;" data-aos="fade-right" data-aos-duration="1000"
 data-aos-offset="300"
 data-aos-easing="ease-in-sine">
     <!--footer content-->
