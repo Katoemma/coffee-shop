@@ -30,6 +30,9 @@ module.exports = {
       backgroundImage : {
         
       },
+      listStyleImage: {
+        checkmark: 'url("/images/assets/checkmark.png")',
+      },
     },
   },
   plugins: [],
