@@ -1,10 +1,10 @@
 var count = 0;
 const targetCount = 30;
-const interval = 0.001;
+const interval = 100;
 const countElement = document.getElementById("count");
 
 const countInterval = setInterval(() => {
-  count ++;
+  count += 1;
   if (count > targetCount) {
     count = targetCount;
     clearInterval(countInterval);
