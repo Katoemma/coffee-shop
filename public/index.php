@@ -1,4 +1,8 @@
+<?php 
+    include 'connection.php';
 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -260,13 +264,13 @@
                     <li class="text-xl text-white flex"><img src="images/assets/checkmark.png" class="w-8 " alt="">  Free ice cream</li>
                 </ul>
             </div>
-            <form method="POST" class="flex flex-col gap-3 py-4 md:w-1/2 md:px-12" data-netlify="true">
-                <input type="text" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Your Name">
-                <input type="email" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Your Email">
-                <input type="date" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Date">
-                <input type="time" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Time">
-                <input type="number" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Number Of Guests">
-                <button type="submit" class="w-full bg-reddish p-2 border-2 border-reddish rounded-xl text-xl font-bold text-white">Book Now</button>
+            <form method="POST" action="addbook.php" class="flex flex-col gap-3 py-4 md:w-1/2 md:px-12">
+                <input type="text" name="name" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Your Name">
+                <input type="email" name="email" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Your Email">
+                <input type="date" name="date" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Date">
+                <input type="time" name="time" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Time">
+                <input type="number" name="guests" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Number Of Guests">
+                <button type="submit" name="submit" class="w-full bg-reddish p-2 border-2 border-reddish rounded-xl text-xl font-bold text-white">Book Now</button>
             </form>
         </div>
     </div>
