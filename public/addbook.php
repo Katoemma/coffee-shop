@@ -12,6 +12,7 @@
 
     mysqli_query($conn, "INSERT INTO booking (name, email, date, time, guests) VALUES ('$n', '$e', '$d', '$t', '$g')" )
     or die("failed to add " .mysqli_error($conn));
+    ?><script> alert("your order is submitted");</script><?php
     header("location:index.php");
-    print '<script> alert("your order is submitted");</script>';
+    
 ?>

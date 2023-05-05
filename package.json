@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "build": "tailwindcss -i ./public/input.css -o ./public/css/styles.css ",
-    "watch": "tailwindcss -i ./public/input.css -o ./public/css/styles.css --watch"
-  },
-  "dependencies": {
-    "tailwindcss": "^3.3.1"
-  }
-}
