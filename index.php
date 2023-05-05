@@ -13,22 +13,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--font awesome link-->
     <!--AOS links-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
 
 </head>
 <body>
     <!--background video-->
     <div class="absolute top-0 left-0 z-10 w-full">
-        <video src="videos/bg video.mp4" class="hidden md:block w-full h-full" muted loop autoplay></video>
-        <video src="videos/cccbb.mp4" class="md:hidden w-full h-screen" muted loop autoplay></video>
+        <video src="public/videos/bg video.mp4" class="hidden md:block w-full h-full" muted loop autoplay></video>
+        <video src="public/videos/cccbb.mp4" class="md:hidden w-full h-screen" muted loop autoplay></video>
     </div>
     <!--nav bar-->
     <nav class="sticky top-0 left-0 flex justify-between z-50 w-full items-center md:px-12" style="background: rgb(0, 0, 0, 0.5);">
         <div class="p-4">
-            <a href="#"><img src="images/assets/logo.png" class="w-24" alt="logo"></a>
+            <a href="#"><img src="public/images/assets/logo.png" class="w-24" alt="logo"></a>
         </div>
         <!--nav links-->
         <div class="hidden absolute pl-8 py-8 pt-56 w-full md:relative md:w-auto md:bg-none md:flex md:gap-12 list-none md:p-4" id="navLinks">
-            <img src="images/assets/close button.png" class="absolute right-8 w-12 md:hidden" alt="close" onclick="closeMenu()">
+            <img src="public/images/assets/close button.png" class="absolute right-8 w-12 md:hidden" alt="close" onclick="closeMenu()">
             <a href="#">
                 <li class="text-2xl text-white hover:text-reddish ">Home</li>
             </a>
@@ -44,9 +45,9 @@
         </div>
         <!--open and close icons, plus order button-->
         <div class="p-4">
-            <img src="images/assets/menu icon.png" class="w-12 md:hidden" alt="close" onclick="openmenu()">
+            <img src="public/images/assets/menu icon.png" class="w-12 md:hidden" alt="close" onclick="openmenu()">
             <!--button-->
-            <a href="html/order.html" ><button class="hidden px-8 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
+            <a href="order.php" ><button class="hidden px-8 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
         </div>
     </nav>
     <div class="flex relative z-10 w-full py-16 px-6 md:h-screen" style="background: rgb(0, 0, 0, 0.5);">
@@ -59,7 +60,7 @@
            <p class="text-white text-2xl py-4 md:text-xl md:py-16">
             Life without coffee is a scary place. That’s why we’ve been proudly serving up fresh coffee to the San Francisco area since 2000. Globally sourced with the most delicious blends from around the world directly to your hand, our coffee makes even the most difficult days just a tad easier to get through.
            </p>
-           <a href="html/order.html"><button class="px-12 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
+           <a href="order.php"><button class="px-12 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
         </div>
     </div>
    <!--services-->
@@ -72,7 +73,7 @@
         <div class="flex flex-col justify-between py-12 gap-8 md:flex-row">
             <!--coffee delivery-->
             <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish "  data-aos="fade-up" data-aos-duration="2000">
-                <img src="images/delivery.png" class="border-4 rounded-3xl border-grayish h-96" alt="coffee delivery">
+                <img src="public/images/delivery.png" class="border-4 rounded-3xl border-grayish h-96" alt="coffee delivery">
                 <div class="flex flex-col items-center gap-8 p-4">
                     <h1 class="text-4xl font-bold">Coffee Delivery</h1>
                     <div class="w-full">
@@ -86,7 +87,7 @@
 
              <!--coffee delivery-->
              <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish " data-aos="flip-down" data-aos-duration="2000">
-                <img src="images/coffee testing.png" class="border-4 rounded-3xl border-grayish h-96" alt="coffee delivery">
+                <img src="public/images/coffee testing.png" class="border-4 rounded-3xl border-grayish h-96" alt="coffee delivery">
                 <div class="flex flex-col items-center gap-8 p-4">
                     <h1 class="text-4xl font-bold">Coffee Testing</h1>
                     <div class="w-full">
@@ -100,7 +101,7 @@
 
              <!--coffee delivery-->
              <div class="flex flex-col bg-grayish border-4 rounded-3xl border-grayish " data-aos="fade-up" data-aos-duration="2000">
-                <img src="images/ice cream.png" class="border-4 rounded-3xl border-grayish h-96" alt="coffee delivery">
+                <img src="public/images/ice cream.png" class="border-4 rounded-3xl border-grayish h-96" alt="coffee delivery">
                 <div class="flex flex-col items-center gap-8 p-4">
                     <h1 class="text-4xl font-bold">Ice cream</h1>
                     <div class="w-full">
@@ -135,7 +136,7 @@
 
 
             <div class="w-full md:2/5" data-aos="zoom-in-down" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
-                <img src="images/coffee cup.png" alt="coffee cup" class="h-96">
+                <img src="public/images/coffee cup.png" alt="coffee cup" class="h-96">
             </div>
             
             
@@ -161,7 +162,7 @@
                 <!--meal card -1 -->
                 <div class="flex justify-between w-96 gap-8 text-start p-4 border-4 border-grayish rounded-3xl"  data-aos="fade-right" data-aos-duration="4000" data-aos-easing="ease-out-cubic"> 
                     
-                    <img src="images/colombian coffee.png" class="w-40"  alt="colombian coffee">
+                    <img src="public/images/colombian coffee.png" class="w-40"  alt="colombian coffee">
                     
                     <!--price and description-->
                     <div class="flex flex-col justify-between">
@@ -174,7 +175,7 @@
                 <!--meal card -2 -->
                 <div class="flex justify-between w-96 gap-8 text-start p-4 border-4 border-grayish rounded-3xl">
                     
-                    <img src="images/colombian coffee.png" class="w-40"  alt="colombian coffee">
+                    <img src="public/images/colombian coffee.png" class="w-40"  alt="colombian coffee">
                     
                     <!--price and description-->
                     <div class="flex flex-col justify-between">
@@ -187,7 +188,7 @@
                 <!--meal card -3 -->
                 <div class="flex justify-between w-96 gap-8 text-start p-4 border-4 border-grayish rounded-3xl">
                     
-                    <img src="images/colombian coffee.png" class="w-40"  alt="colombian coffee">
+                    <img src="public/images/colombian coffee.png" class="w-40"  alt="colombian coffee">
                     
                     <!--price and description-->
                     <div class="flex flex-col justify-between">
@@ -204,7 +205,7 @@
                 <!--meal card -1 -->
                 <div class="flex justify-between w-96 gap-8 text-start p-4 border-4 border-grayish rounded-3xl">
                     
-                    <img src="images/colombian coffee.png" class="w-40"  alt="colombian coffee">
+                    <img src="public/images/colombian coffee.png" class="w-40"  alt="colombian coffee">
                     
                     <!--price and description-->
                     <div class="flex flex-col justify-between">
@@ -217,7 +218,7 @@
                 <!--meal card -2 -->
                 <div class="flex justify-between w-96 gap-8 text-start p-4 border-4 border-grayish rounded-3xl">
                     
-                    <img src="images/colombian coffee.png" class="w-40"  alt="colombian coffee">
+                    <img src="public/images/colombian coffee.png" class="w-40"  alt="colombian coffee">
                     
                     <!--price and description-->
                     <div class="flex flex-col justify-between">
@@ -230,7 +231,7 @@
                 <!--meal card -3 -->
                 <div class="flex justify-between w-96 gap-8 text-start p-4 border-4 border-grayish rounded-3xl">
                     
-                    <img src="images/colombian coffee.png" class="w-40"  alt="colombian coffee">
+                    <img src="public/images/colombian coffee.png" class="w-40"  alt="colombian coffee">
                     
                     <!--price and description-->
                     <div class="flex flex-col justify-between">
@@ -246,7 +247,7 @@
 
     <!--online table booking section-->
     <div class="fixed h-screen top-1 z-0 w-full md:h-auto ">
-        <video src="videos/coffee introo.mp4" class="w-full" muted loop autoplay></video>
+        <video src="public/videos/coffee introo.mp4" class="w-full" muted loop autoplay></video>
     </div>
     <!-- table booking form-->
     <div class="relative flex flex-col gap-8 z-10 p-4 md:py-24" style="background: rgb(0, 0, 0, 0.2);">
@@ -263,12 +264,12 @@
                     <li class="text-xl text-white flex"><img src="images/assets/checkmark.png" class="w-8 " alt="">  Free ice cream</li>
                 </ul>
             </div>
-            <form method="POST" action="addbook.php" class="flex flex-col gap-3 py-4 md:w-1/2 md:px-12">
-                <input type="text" name="name" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Your Name">
-                <input type="email" name="email" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Your Email">
-                <input type="date" name="date" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Date">
-                <input type="time" name="time" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Time">
-                <input type="number" name="guests" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Number Of Guests">
+            <form method="POST" action="addbook.php" class="flex flex-col gap-3 py-4 md:w-1/2 md:px-12" onsubmit="return validateForm()">
+                <input type="text" name="name" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Your Name" required>
+                <input type="email" name="email" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Your Email" required>
+                <input type="date" name="date" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Date" required>
+                <input type="time" name="time" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Time" required>
+                <input type="number" name="guests" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Number Of Guests" required>
                 <button type="submit" name="submit" class="w-full bg-reddish p-2 border-2 border-reddish rounded-xl text-xl font-bold text-white">Book Now</button>
             </form>
         </div>
@@ -279,7 +280,7 @@
         <div class="flex flex-col p-4 gap-2  border-4 border-grayish rounded-xl bg-cream md:gap-6 backdrop-blur-lg">
             <div class="flex justify-between">
                 <h1 class="text-xl font-bold text-reddish">Make your purchase</h1>
-                <img src="images/assets/close black.png" alt="" class="w-8 cursor-pointer" onclick="cancelOrder()">
+                <img src="public/images/assets/close black.png" alt="" class="w-8 cursor-pointer" onclick="cancelOrder()">
             </div>
            
             <div class="flex flex-col gap-2">
@@ -309,11 +310,11 @@
             <div class="flex flex-col gap-4">
                 <label for="" class="text-xl text-reddish font-bold">Choose Your Payment Method</label>
                 <div class="flex justify-between gap-3">
-                    <img src="images/assets/visa.png" alt="visa" class="w-12 rounded cursor-pointer">
-                    <img src="images/assets/mastercard.png" alt="visa" class="w-12 rounded cursor-pointer">
-                    <img src="images/assets/paypal.png" alt="visa" class="w-12 rounded cursor-pointer">
-                    <img src="images/assets/mtn momo.png" alt="visa" class="w-12 rounded cursor-pointer">
-                    <img src="images/assets/airtel money.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/visa.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/mastercard.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/paypal.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/mtn momo.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/airtel money.png" alt="visa" class="w-12 rounded cursor-pointer">
                 </div>
             </div>
             <button class="bg-reddish text-xl font-bold text-white rounded-xl p-2 hover:bg-white hover:border-reddish border-2 hover:text-reddish">Confirm Your Order</button>
@@ -323,7 +324,7 @@
 
 
 <!--footer sectrion-->
-<footer class="relative z-10 h-fit w-full" style="background-image: url(images/coffee\ bg.jpg); background-repeat: no-repeat; background-size: cover;">
+<footer class="relative z-10 h-fit w-full" style="background-image: url(public/images/coffee\ bg.jpg); background-repeat: no-repeat; background-size: cover;">
     <!--footer content-->
     <div class="flex flex-col gap-4 h-full w-full p-12 items-center md:flex-row md:items-start md:justify-between" style="background: rgb(0, 0, 0, 0.5)">
         <!--contact s-->
@@ -331,7 +332,7 @@
             <h1 class="text-reddish text-2xl font-bold">
                 Follow us
             </h1>
-            <img src="images/assets/logo.png" alt="" class="w-24 md:w-36">
+            <img src="public/images/assets/logo.png" alt="" class="w-24 md:w-36">
             <!--social links-->
             <div class="flex justify-between gap-12">
                 <a href="#"><i class="fa fa-facebook text-white text-2xl hover:text-reddish md:text-4xl"></i></a>
@@ -399,5 +400,6 @@
 <script>
     AOS.init();
 </script>
-<script src="js/index.js"></script>
+<script src="public/js/index.js"></script>
+<script src="public/js/form.js"></script>
 </html>

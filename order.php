@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Coffee</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--font awesome link-->
-    
+    <link rel="stylesheet" href="output.css">
     <!--AOS links-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -15,12 +15,12 @@
     <!--nav bar-->
     <nav class="sticky top-0 left-0 flex justify-between z-40 w-full items-center md:px-12" style="background: rgb(0, 0, 0);">
         <div class="p-4">
-            <a href="../index.html"><img src="../images/assets/logo.png" class="w-24" alt="logo"></a>
+            <a href="index.php"><img src="public/images/assets/logo.png" class="w-24" alt="logo"></a>
         </div>
         <!--nav links-->
         <div class="hidden absolute pl-8 py-8 pt-56 w-full md:relative md:w-auto md:bg-none md:flex md:gap-12 list-none md:p-4" id="navLinks">
-            <img src="../images/assets/close button.png" class="absolute right-8 w-12 md:hidden" alt="close" onclick="closeMenu()">
-            <a href="../index.html">
+            <img src="public/images/assets/close button.png" class="absolute right-8 w-12 md:hidden" alt="close" onclick="closeMenu()">
+            <a href="index.php">
                 <li class="text-2xl text-white hover:text-reddish ">Home</li>
             </a>
             <a href="#">
@@ -35,7 +35,7 @@
         </div>
         <!--open and close icons, plus order button-->
         <div class="p-4">
-            <img src="../images/assets/menu icon.png" class="w-12 md:hidden" alt="close" onclick="openmenu()">
+            <img src="public/images/assets/menu icon.png" class="w-12 md:hidden" alt="close" onclick="openmenu()">
             <!--button-->
             <a href="#" ><button class="hidden px-8 py-2 bg-reddish rounded-xl text-white text-xl font-bold md:block hover:text-reddish hover:bg-white">Order now</button></a>
         </div>
@@ -50,7 +50,7 @@
         <div class="flex flex-col p-4 gap-2 md:grid grid-cols-5 grid-rows-2 md:gap-4 md:px-16">
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -62,7 +62,7 @@
 
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -73,7 +73,7 @@
             </div>
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -84,7 +84,7 @@
             </div>
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -95,7 +95,7 @@
             </div>
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -106,7 +106,7 @@
             </div>
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -117,7 +117,7 @@
             </div>
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -128,7 +128,7 @@
             </div>
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -139,7 +139,7 @@
             </div>
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -150,7 +150,7 @@
             </div>
             <!--card -1-->
             <div class="flex flex-col p-8 bg-white gap-4 border-grayish border-4 rounded-xl">
-                <img src="../images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
+                <img src="public/images/colombian coffee.png"class="w-72 rounded-xl cursor-pointer" alt="" onclick="openPurchase()">
                 <div class="flex flex-col">
                     <h2 class="text-xl">Price: <span class="font-bold">UGX 1500/=</span></h2>
                     <h2 class="text-xl">Quantity: <span class="font-bold">200ml</span></h2>
@@ -167,7 +167,7 @@
         <div class="flex flex-col p-4 gap-2  border-4 border-grayish rounded-xl bg-cream md:gap-6 backdrop-blur-lg">
             <div class="flex justify-between">
                 <h1 class="text-xl font-bold text-reddish">Make your purchase</h1>
-                <img src="../images/assets/close black.png" alt="" class="w-8 cursor-pointer" onclick="cancelOrder()">
+                <img src="public/images/assets/close black.png" alt="" class="w-8 cursor-pointer" onclick="cancelOrder()">
             </div>
            
             <div class="flex flex-col gap-2">
@@ -197,11 +197,11 @@
             <div class="flex flex-col gap-4">
                 <label for="" class="text-xl text-reddish font-bold">Choose Your Payment Method</label>
                 <div class="flex justify-between gap-3">
-                    <img src="../images/assets/visa.png" alt="visa" class="w-12 rounded cursor-pointer">
-                    <img src="../images/assets/mastercard.png" alt="visa" class="w-12 rounded cursor-pointer">
-                    <img src="../images/assets/paypal.png" alt="visa" class="w-12 rounded cursor-pointer">
-                    <img src="../images/assets/mtn momo.png" alt="visa" class="w-12 rounded cursor-pointer">
-                    <img src="../images/assets/airtel money.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/visa.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/mastercard.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/paypal.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/mtn momo.png" alt="visa" class="w-12 rounded cursor-pointer">
+                    <img src="public/images/assets/airtel money.png" alt="visa" class="w-12 rounded cursor-pointer">
                 </div>
             </div>
             <button class="bg-reddish text-xl font-bold text-white rounded-xl p-2 hover:bg-white hover:border-reddish border-2 hover:text-reddish">Confirm Your Order</button>
@@ -210,10 +210,10 @@
 
 
 
-    <script src="../js/index.js"></script>
+    <script src="public/js/index.js"></script>
 </body>
 <!--footer sectrion-->
-<footer class="relative z-10 h-fit w-full" style="background-image: url(../images/coffee\ bg.jpg); background-repeat: no-repeat; background-size: cover;">
+<footer class="relative z-10 h-fit w-full" style="background-image: url(public/images/coffee\ bg.jpg); background-repeat: no-repeat; background-size: cover;">
     <!--footer content-->
     <div class="flex flex-col gap-4 h-full w-full p-12 items-center md:flex-row md:items-start md:justify-between" style="background: rgb(0, 0, 0, 0.5)">
         <!--contact s-->
@@ -221,7 +221,7 @@
             <h1 class="text-reddish text-2xl font-bold">
                 Follow us
             </h1>
-            <img src="images/assets/logo.png" alt="" class="w-24 md:w-36">
+            <img src="public/images/assets/logo.png" alt="" class="w-24 md:w-36">
             <!--social links-->
             <div class="flex justify-between gap-12">
                 <a href="#"><i class="fa fa-facebook text-white text-2xl hover:text-reddish md:text-4xl"></i></a>
