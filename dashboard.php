@@ -58,16 +58,13 @@
             </li>
             <li>
                 <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-                    <img src="public/images/assets/add_cart.svg" class="h-5 w-5" alt="">
+                    <img src="public/images/assets/shoppin.svg" class="h-5 w-5" alt="">
                     <span class="group-hover:text-gray-700">Table Bookings</span>
                 </a>
             </li>
             <li>
                 <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
-                    </svg>
+                    <img src="public/images/assets/add_cart.svg" class="h-5 w-5" alt="">
                     <span class="group-hover:text-gray-700">Products</span>
                 </a>
             </li>
@@ -82,29 +79,33 @@
             </li>
             <li>
                 <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
-                    </svg>
+                    <img src="public/images/assets/employee.svg" class="h-5 w-5" alt="">
                     <span class="group-hover:text-gray-700">Employees</span>
                 </a>
             </li>
         </ul>
     </div>
 
-    <div class="px-6 -mx-6 pt-4 flex justify-between items-center border-t">
+    <div class="px-6 -mx-6 pt-4 flex justify-between items-center border-t group">
         <button class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
-            <span class="group-hover:text-gray-700">Logout</span>
+            <img src="public/images/assets/account.svg" class="h-5 w-5" alt="">
+            <span class="group-hover:text-gray-700">Your Profile</span>
         </button>
+        <div class="hidden absolute right-0 w-40 mb-16 py-2 bg-white border rounded shadow-xl group-hover:block">   
+            <a href="#" class="transition-colors duration-200 block px-4 py-2 text-normal text-gray-900 rounded hover:bg-red-600 hover:text-white">Settings</a>
+            <div class="py-2">
+                <hr></hr>
+            </div>
+            <a href="#" class="transition-colors duration-200 block px-4 py-2 text-normal text-gray-900 rounded hover:bg-red-600 hover:text-white">    
+            Logout
+            </a>
+        </div>
     </div>
 </aside>
 <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
     <div class="sticky z-10 top-0 h-16 border-b bg-white lg:py-2.5">
         <div class="px-6 flex items-center justify-between space-x-4 2xl:container">
-            <h5 hidden class="text-2xl text-gray-600 font-medium lg:block">Dashboard</h5>
+            <h5 hidden class="text-2xl text-red-600 font-bold lg:block">Dashboard</h5>
             <button class="w-12 h-16 -mr-2 border-r lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 my-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -129,14 +130,11 @@
                     </svg>
                 </button>
                 <button aria-label="chat" class="w-10 h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 m-auto text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                    </svg>
+                    <img src="public/images/assets/email.svg" class="h-5 w-5 m-auto text-gray-600" alt="">
+                    <span class="absolute inline-flex items-center rounded-md bg-red-700 px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-pink-700/10"><?php echo $notifier ?></span>
                 </button>
                 <button aria-label="notification" onclick="resetNotifier()" class="w-10 h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 m-auto text-gray-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
-                    </svg>
+                   <img src="public/images/assets/notifications.svg" class="h-5 w-5 m-auto text-gray-600" alt="">
                     <span class="absolute inline-flex items-center rounded-md bg-red-700 px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-pink-700/10"><?php echo $notifier ?></span>
                 </button>
             </div>

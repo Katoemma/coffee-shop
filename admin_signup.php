@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="output.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     
 </head>
-<body class="flex flex-col items-center  w-full h-screen bg-coffee">
+<body class="flex flex-col items-center  w-full h-screen bg-gradient-to-r from-neutral-300 to-stone-400">
     <img src="public/images/assets/logo.png" class="h-24" alt="">
 
     <div class="container mx-auto py-8">
@@ -61,7 +62,7 @@
             </div>
         
         <input
-            class="w-full bg-indigo-500 text-white text-sm font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
+            class="w-full bg-red-600 text-white text-sm font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
             type="submit" name="submit" value="Register">
         </form>
   </div>
