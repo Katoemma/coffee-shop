@@ -4,6 +4,12 @@
     $sql_get = mysqli_query($conn, "SELECT * FROM booking WHERE status=0");
     $notifier = mysqli_num_rows($sql_get);
 
+    //check if the acoount exists
+    $qry = mysqli_query($conn, "SELECT * FROM admin");
+    if(mysqli_num_rows($qry) < 1){
+        header("Location: admin_signup.php");
+    }
+
     //retrieving the profile pic
     $result =mysqli_query($conn, "SELECT fname, lname, photo FROM admin WHERE id= 1");
 

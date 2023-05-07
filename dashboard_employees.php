@@ -1,30 +1,23 @@
 <?php
-    session_start();
-
     include 'connection.php';
-
-
 
     $sql_get = mysqli_query($conn, "SELECT * FROM booking WHERE status=0");
     $notifier = mysqli_num_rows($sql_get);
+
     //check if the acoount exists
     $qry = mysqli_query($conn, "SELECT * FROM admin");
     if(mysqli_num_rows($qry) < 1){
         header("Location: admin_signup.php");
     }
+
     //retrieving the profile pic
-    $result =mysqli_query($conn, "SELECT * FROM admin WHERE id= 1");
+    $result =mysqli_query($conn, "SELECT fname, lname, photo FROM admin WHERE id= 1");
+
     if (mysqli_num_rows($result) > 0){
         $row =mysqli_fetch_assoc($result);
         $fname = $row['fname'];
         $lname = $row['lname'];
         $photo = $row['photo'];    
-    }
-    $orders =array();
-    $oqry =mysqli_query($conn, "SELECT * FROM booking");
-
-    while ($of = mysqli_fetch_assoc($oqry)){
-        $orders[] = $of;
     }
    
 ?>
@@ -54,7 +47,7 @@
 
         <ul class="space-y-2 tracking-wide mt-8">
             <li>
-                <a href="dashboard.php" aria-label="dashboard" class="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-600 ">
+                <a href="#" aria-label="dashboard" class="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400">
                     <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
                         <path d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8ZM6 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1Z" class="fill-current text-cyan-400 dark:fill-slate-600"></path>
                         <path d="M13 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V8Z" class="fill-current text-cyan-200 group-hover:text-cyan-300"></path>
@@ -64,13 +57,13 @@
                 </a>
             </li>
             <li>
-                <a href="dashboard_order.php" class="px-4 py-3 flex items-center space-x-4 rounded-md  text-gray-600  group ">
+                <a href="dashboard_order.php" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
                     <img src="public/images/assets/deliver.svg" class="h-5 w-5" alt="">
                     <span class="group-hover:text-gray-700">Orders</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-white group bg-gradient-to-r from-sky-600 to-cyan-400">
+                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
                     <img src="public/images/assets/shoppin.svg" class="h-5 w-5" alt="">
                     <span class="group-hover:text-gray-700">Table Bookings</span>
                 </a>
@@ -109,7 +102,7 @@
             <div class="py-2">
                 <hr></hr>
             </div>
-            <a href="#" class="transition-colors duration-200 block px-4 py-2 text-normal text-gray-900 rounded hover:bg-red-600 hover:text-white">    
+            <a href="logout.php" class="transition-colors duration-200 block px-4 py-2 text-normal text-gray-900 rounded hover:bg-red-600 hover:text-white">    
             Logout
             </a>
         </div>
@@ -153,138 +146,10 @@
             </div>
         </div>
     </div>
-<!--orders table-->
-    <div class="bg-white p-8 rounded-md w-full">
-	<div class=" flex items-center justify-between pb-6">
-		<div>
-			<div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-				<div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
-					<table class="min-w-full leading-normal">
-						<thead>
-							<tr>
-                                <th
-									class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-									Id
-								</th>
-								<th
-									class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-									Name
-								</th>
-								<th
-									class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-									email
-								</th>
-								<th
-									class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-									Date
-								</th>
-								<th
-									class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-									time
-								</th>
-								<th
-									class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-									Submission Date
-								</th>
-                                <th
-									class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-									status
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-                            <?php foreach ($orders as $order) { ?>
-							<tr>
-								<td class="px-2  py-5 border-b border-gray-200 bg-white text-sm">
-									<div class="flex items-center">
-                                        <div class="ml-3">
-                                            <p class="text-gray-900 whitespace-no-wrap">
-                                            <?php echo $order['id']; ?>
-                                            </p>
-                                        </div>
-                                    </div>
-								</td>
-								<td class="px-2  py-5 border-b border-gray-200 bg-white text-sm">
-									<div class="flex items-center">
-                                        <div class="ml-3">
-                                            <p class="text-gray-900 whitespace-no-wrap">
-                                            <?php echo $order['name']; ?>
-                                            </p>
-                                        </div>
-                                    </div>
-								</td>
-								<td class="px-2  py-5 border-b border-gray-200 bg-white text-sm">
-									<div class="flex items-center">
-                                        <div class="ml-3">
-                                            <p class="text-gray-900 whitespace-no-wrap">
-                                            <?php echo $order['email']; ?>
-                                            </p>
-                                        </div>
-                                    </div>
-								</td>
-								<td class="px-2  py-5 border-b border-gray-200 bg-white text-sm">
-									<div class="flex items-center">
-                                        <div class="ml-3">
-                                            <p class="text-gray-900 whitespace-no-wrap">
-                                            <?php echo $order['date']; ?>
-                                            </p>
-                                        </div>
-                                    </div>
-								</td>
-								<td class="px-2  py-5 border-b border-gray-200 bg-white text-sm">
-									<div class="flex items-center">
-                                        <div class="ml-3">
-                                            <p class="text-gray-900 whitespace-no-wrap">
-                                            <?php echo $order['guests']; ?>
-                                            </p>
-                                        </div>
-                                    </div>
-								</td>
-                                <td class="px-2  py-5 border-b border-gray-200 bg-white text-sm">
-									<div class="flex items-center">
-                                        <div class="ml-3">
-                                            <p class="text-gray-900 whitespace-no-wrap">
-                                            <?php echo $order['sdate']; ?>
-                                            </p>
-                                        </div>
-                                    </div>
-								</td>
-                                <td class="px-2 py-5 border-b border-gray-200 bg-white text-sm">
-									<div class="flex items-center">
-                                        <div class="ml-3">
-                                            <p class="text-gray-900 whitespace-no-wrap">
-                                            <?php echo $order['status']; ?>
-                                            </p>
-                                        </div>
-                                    </div>
-								</td>
-							</tr>
-							<?php } ?>
-						</tbody>
-					</table>
+</div>
 
 
-					<div
-						class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
-						<span class="text-xs xs:text-sm text-gray-900">
-                            Showing 1 to 4 of 50 Entries
-                        </span>
-						<div class="inline-flex mt-2 xs:mt-0">
-							<button
-                                class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-l">
-                                Prev
-                            </button>
-							&nbsp; &nbsp;
-							<button
-                                class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-r">
-                                Next
-                            </button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
 </body>
 <script src="public/js/form.js"></script>
 </html>

@@ -4,6 +4,12 @@
     $sql_get = mysqli_query($conn, "SELECT * FROM booking WHERE status=0");
     $notifier = mysqli_num_rows($sql_get);
 
+    //check if the acoount exists
+    $qry = mysqli_query($conn, "SELECT * FROM admin");
+    if(mysqli_num_rows($qry) < 1){
+        header("Location: admin_signup.php");
+    }
+
     //retrieving the profile pic
     $result =mysqli_query($conn, "SELECT fname, lname, photo FROM admin WHERE id= 1");
 
@@ -78,7 +84,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                <a href="dashboard_employees.php" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
                     <img src="public/images/assets/employee.svg" class="h-5 w-5" alt="">
                     <span class="group-hover:text-gray-700">Employees</span>
                 </a>
@@ -96,7 +102,7 @@
             <div class="py-2">
                 <hr></hr>
             </div>
-            <a href="#" class="transition-colors duration-200 block px-4 py-2 text-normal text-gray-900 rounded hover:bg-red-600 hover:text-white">    
+            <a href="logout.php" class="transition-colors duration-200 block px-4 py-2 text-normal text-gray-900 rounded hover:bg-red-600 hover:text-white">    
             Logout
             </a>
         </div>
