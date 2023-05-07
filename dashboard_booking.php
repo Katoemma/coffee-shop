@@ -115,7 +115,7 @@
         </div>
     </div>
 </aside>
-<div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+<div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]" >
     <div class="sticky z-10 top-0 h-16 border-b bg-white lg:py-2.5">
         <div class="px-6 flex items-center justify-between space-x-4 2xl:container">
             <h5 hidden class="text-2xl text-red-600 font-bold lg:block">Dashboard</h5>
@@ -154,7 +154,7 @@
         </div>
     </div>
 <!--orders table-->
-    <div class="bg-white p-8 rounded-md w-full">
+    <div class=" p-8 rounded-md w-full bg-yellow-50" >
 	<div class=" flex items-center justify-between pb-6">
 		<div>
 			<div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
