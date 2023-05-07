@@ -41,7 +41,7 @@
 
         <ul class="space-y-2 tracking-wide mt-8">
             <li>
-                <a href="#" aria-label="dashboard" class="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400">
+                <a href="dashboard.php" aria-label="dashboard" class="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-gray-600 ">
                     <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
                         <path d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8ZM6 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1Z" class="fill-current text-cyan-400 dark:fill-slate-600"></path>
                         <path d="M13 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V8Z" class="fill-current text-cyan-200 group-hover:text-cyan-300"></path>
@@ -51,13 +51,13 @@
                 </a>
             </li>
             <li>
-                <a href="dashboard_order.php" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-white  group bg-gradient-to-r from-sky-600 to-cyan-400">
                     <img src="public/images/assets/deliver.svg" class="h-5 w-5" alt="">
                     <span class="group-hover:text-gray-700">Orders</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                <a href="dashboard_booking.php" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
                     <img src="public/images/assets/shoppin.svg" class="h-5 w-5" alt="">
                     <span class="group-hover:text-gray-700">Table Bookings</span>
                 </a>
@@ -140,8 +140,8 @@
             </div>
         </div>
     </div>
-<!--hsiywvdyfwdwdvwyi-->
-    <!-- <div class="px-6 pt-6 2xl:container">
+
+    <div class="px-6 pt-6 2xl:container">
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div class="md:col-span-2 lg:col-span-1" >
                 <div class="h-full py-8 px-6 space-y-6 rounded-xl border border-gray-200 bg-white">
@@ -407,7 +407,7 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 </body>
 <script src="public/js/form.js"></script>
 </html>
