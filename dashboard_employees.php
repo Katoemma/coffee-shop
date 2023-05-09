@@ -19,7 +19,15 @@
         $lname = $row['lname'];
         $photo = $row['photo'];    
     }
+   //retrieving the employees data from database
+   $employees =array();
    
+    $oqry =mysqli_query($conn, "SELECT * FROM employees");
+
+    while ($of = mysqli_fetch_assoc($oqry)){
+        $employees[] = $of;
+        $total_employees =count($employees);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -154,18 +162,74 @@
             <div class="flex items-center gap-x-3">
                 <h2 class="text-lg font-medium text-gray-800 dark:text-white">Employees</h2>
 
-                <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400"> 10 Employees</span>
+                <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400"><?php echo $total_employees ?> Employees</span>
             </div>
         </div>
 
         <div class="flex items-center mt-4 gap-x-3">
-            <button class="flex items-center justify-center w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto gap-x-2 hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600">
+            <button class="flex items-center justify-center w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto gap-x-2 hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600" onclick="openForm()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
 
                 <span>Add Employee</span>
             </button>
+            
+        </div>
+        <!--employee addition form-->
+        <div class="hidden absolute top-12 z-30 right-4 mt-auto py-8" id="empform">
+            <form class="w-full max-w-sm mx-auto bg-white p-8 rounded-md shadow-md" action="addemployee.php" method="post" enctype="multipart/form-data" >
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">First Name</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    type="text" id="name" name="fname" placeholder="Enter First Name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Last Name</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    type="text" id="name" name="lname" placeholder="Enter Last Name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Phone</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    type="tel" id="email" name="phone" placeholder="Enter Your Phone" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    type="password" id="pass" name="pass" placeholder="********" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password">Confirm Password</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                    type="password" id="confirm-password" placeholder="********" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="image">Upload mage</label>
+                    <input name="image" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="department">Department</label>
+                    <select name="department" id="" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500" required>
+                        <option value="">Choose department</option>
+                        <option value="1">Catering</option>
+                        <option value="2">Human resource</option>
+                        <option value="3">Transport</option>
+                    </select>
+                </div>
+            
+                <input
+                    class="w-full bg-green-600 text-white text-sm font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-300"
+                    type="submit" name="submit" value="Add Employee"
+                >
+                <button type="button" class="w-full bg-red-600 text-white text-sm font-bold mt-1 py-2 px-4 rounded-md transition duration-300" onclick="closeForm()">Cancel</button>
+            </form>
         </div>
     </div>
 
@@ -224,48 +288,52 @@
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+                            <?php foreach($employees as $employee){?>
                             <tr>
                                 <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
                                     <div>
-                                        <h2 class="font-medium text-gray-800 dark:text-white ">Catalog</h2>
-                                        <p class="text-sm font-normal text-gray-600 dark:text-gray-400">catalogapp.io</p>
+                                        <p class="text-sm font-normal text-gray-600 dark:text-gray-400"><?php echo $employee['id'];?></p>
                                     </div>
                                 </td>
                                 <td class="px-12 py-4 text-sm font-medium whitespace-nowrap">
                                     <div class="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                        Customer
+                                    <?php echo $employee['fname']." ". $employee['lname'];?>
                                     </div>
                                 </td>
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
                                     <div>
-                                        <h4 class="text-gray-700 dark:text-gray-200">Content curating app</h4>
-                                        <p class="text-gray-500 dark:text-gray-400">Brings all your news into one place</p>
+                                        <p class="text-gray-500 dark:text-gray-400"><?php echo $employee['email'];?></p>
                                     </div>
                                 </td>
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <img class="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" alt="">
-                                        <img class="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" alt="">
-                                        <img class="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80" alt="">
-                                        <img class="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" alt="">
-                                        <p class="flex items-center justify-center w-6 h-6 -mx-1 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">+4</p>
+                                        <p class="text-gray-500 dark:text-gray-400"><?php echo $employee['password'];?></p>
                                     </div>
                                 </td>
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-                                    <div class="w-48 h-1.5 bg-blue-200 overflow-hidden rounded-full">
-                                        <div class="bg-blue-500 w-2/3 h-1.5"></div>
+                                    <div class=" flex items-center">
+                                        <p class="text-gray-500 dark:text-gray-400"><?php echo $employee['number'];?></p>
                                     </div>
                                 </td>
 
                                 <td class="px-4 py-4 text-sm whitespace-nowrap">
-                                    <button class="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
-                                        </svg>
-                                    </button>
+                                    <div class="flex items-center">
+                                        <p class="text-gray-500 dark:text-gray-400">
+                                            <?php
+                                                if ($employee['department'] == 1){
+                                                    echo "Catering";
+                                                }elseif($employee['department'] == 2){
+                                                    echo "Human Resource";
+                                                }else{
+                                                    echo "Transport";
+                                                };
+                                                
+                                        ?></p>
+                                    </div>
                                 </td>
                             </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
@@ -306,4 +374,12 @@
 
 </body>
 <script src="public/js/form.js"></script>
+<script>
+    function closeForm(){
+        document.getElementById("empform").style.display = "none";
+    }
+    function openForm(){
+        document.getElementById("empform").style.display = "block";
+    }
+</script>
 </html>
