@@ -91,7 +91,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                <a href="dashboard_employees.php" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
                     <img src="public/images/assets/employee.svg" class="h-5 w-5" alt="">
                     <span class="group-hover:text-gray-700">Employees</span>
                 </a>
