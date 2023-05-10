@@ -26,4 +26,5 @@ function resetNotifier() {
     };
     xmlhttp.open("GET", "reset_notifier.php", true);
     xmlhttp.send();
+    document.getElementById("chec-div").style.display = "block";
 }

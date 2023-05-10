@@ -270,7 +270,7 @@
                 <input type="date" name="date" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Date" required>
                 <input type="time" name="time" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Time" required>
                 <input type="number" name="guests" class="w-full bg-grayish p-2 border-2 border-reddish rounded-xl" placeholder="Enter Number Of Guests" required>
-                <button type="submit" name="submit" class="w-full bg-reddish p-2 border-2 border-reddish rounded-xl text-xl font-bold text-white">Book Now</button>
+                <button type="submit" name="submit" class="w-full bg-reddish p-2 border-2 border-reddish rounded-xl text-xl font-bold text-white" onclick="alert('Your booking has been submitted!')">Book Now</button>
             </form>
         </div>
     </div>
